@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1091, 917)
+        Dialog.resize(1083, 1022)
         font = QtGui.QFont()
         font.setPointSize(17)
         Dialog.setFont(font)
@@ -132,6 +132,13 @@ class Ui_Dialog(object):
         font.setPointSize(17)
         self.ifFailButton.setFont(font)
         self.ifFailButton.setObjectName("ifFailButton")
+        self.ifSuccessOrFailLabel = QtWidgets.QLabel(Dialog)
+        self.ifSuccessOrFailLabel.setGeometry(QtCore.QRect(70, 740, 641, 31))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(17)
+        self.ifSuccessOrFailLabel.setFont(font)
+        self.ifSuccessOrFailLabel.setObjectName("ifSuccessOrFailLabel")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -151,3 +158,4 @@ class Ui_Dialog(object):
         self.inputCompleteLabel_2.setText(_translate("Dialog", "22"))
         self.ifSuccessButton.setText(_translate("Dialog", "如果算法运行成功"))
         self.ifFailButton.setText(_translate("Dialog", "如果算法运行失败"))
+        self.ifSuccessOrFailLabel.setText(_translate("Dialog", "33"))
