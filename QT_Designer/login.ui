@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>917</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>17</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>30</y>
+     <width>501</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>*=*=*=*欢迎来到登陆系统页面*=*=*=*</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>90</y>
+     <width>601</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>请设定参数：包括图像位置，阈值，产品批号，工人工号</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>152</y>
+     <width>198</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>请选择图像路径：  </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="pathInput">
+   <property name="geometry">
+    <rect>
+     <x>266</x>
+     <y>152</y>
+     <width>453</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>230</y>
+     <width>201</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>请输入阈值：         </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="yuzhiInput">
+   <property name="geometry">
+    <rect>
+     <x>267</x>
+     <y>230</y>
+     <width>453</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>307</y>
+     <width>184</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>请输入产品批号：</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="productNumInput">
+   <property name="geometry">
+    <rect>
+     <x>266</x>
+     <y>307</y>
+     <width>454</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>384</y>
+     <width>184</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>请输入工人工号：</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="personNumInput">
+   <property name="geometry">
+    <rect>
+     <x>266</x>
+     <y>384</y>
+     <width>454</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>490</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>490</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputCompleteLabel">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>560</y>
+     <width>641</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>11</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputCompleteLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>600</y>
+     <width>641</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>22</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ifSuccessButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>680</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>如果算法运行成功</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ifFailButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>680</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>如果算法运行失败</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
