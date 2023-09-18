@@ -1,56 +1,73 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog
-from QT_Designer import login
+from PyQt5.QtWidgets import *
+from QT_Designer import login, report
+import report_action
 import requests
 
 
-class MainDialog(QDialog):
+class MainWindow(login.Ui_MainWindow, QMainWindow):
     def __init__(self, parent=None):
-        super(QDialog, self).__init__(parent)
-        self.ui = login.Ui_Dialog()
-        self.ui.setupUi(self)
+        super(login.Ui_MainWindow, self).__init__(parent)
 
+        super().__init__()
+        self.another_window = None
+        self.setupUi(self)
+
+        self.w = report.Ui_ReportWindow()
         # 连接按钮的功能
-        self.ui.confirmButton.clicked.connect(self.confirm)
-        self.ui.cancelButton.clicked.connect(self.cancel)
+        self.confirmButton.clicked.connect(self.confirm)
+        self.cancelButton.clicked.connect(self.cancel)
 
-        self.ui.ifSuccessButton.clicked.connect(self.if_success)
-        self.ui.ifFailButton.clicked.connect(self.if_fail)
+        self.ifSuccessButton.clicked.connect(self.if_success)
+        self.ifFailButton.clicked.connect(self.if_fail)
 
     # 获取各个输入框的内容
     def get_text(self):
         # 获取路径
-        path = self.ui.pathInput.toPlainText()
+        path = self.pathInput.toPlainText()
         # 获取阈值
-        yuzhi = self.ui.yuzhiInput.toPlainText()
+        yuzhi = self.yuzhiInput.toPlainText()
         # 获取产品批号
-        product_num = self.ui.productNumInput.toPlainText()
+        product_num = self.productNumInput.toPlainText()
         # 获取工人工号
-        person_num = self.ui.personNumInput.toPlainText()
+        person_num = self.personNumInput.toPlainText()
 
         # self.ui.personNumInput.show()
 
     # 确认键
     def confirm(self):
-        self.ui.inputCompleteLabel.setText("参数设定完毕，马上开始图像识别")
-        self.ui.inputCompleteLabel_2.setText('开始运行图像识别算法：')
+        self.inputCompleteLabel.setText("参数设定完毕，马上开始图像识别")
+        self.inputCompleteLabel_2.setText('开始运行图像识别算法：')
 
     # 取消键
     def cancel(self):
-        self.ui.pathInput.clear()
-        self.ui.personNumInput.clear()
-        self.ui.yuzhiInput.clear()
-        self.ui.productNumInput.clear()
+        self.pathInput.clear()
+        self.personNumInput.clear()
+        self.yuzhiInput.clear()
+        self.productNumInput.clear()
 
     # 如果算法运行成功
     def if_success(self):
-        self.ui.ifSuccessOrFailLabel.clear()
-        self.ui.ifSuccessOrFailLabel.setText("图像算法运行成功，已保存到文件夹")
+        self.ifSuccessOrFailLabel.clear()
+        self.ifSuccessOrFailLabel.setText("图像算法运行成功，已保存到文件夹")
 
     # 如果算法运行失败
     def if_fail(self):
-        self.ui.ifSuccessOrFailLabel.clear()
-        self.ui.ifSuccessOrFailLabel.setText("图像算法运行失败，已保存到文件夹，请选择上报该问题")
+        self.ifSuccessOrFailLabel.clear()
+        self.ifSuccessOrFailLabel.setText("图像算法运行失败，请选择上报该问题")
+
+        self.another_window = report_action.ReportActions()
+
+        self.another_window.show()
+
+        # self.ui.child_window = Child()
+        # self.ui.child_window.show()
+
+
+    # class Child(QWidget):
+    #     def __init__(self):
+    #         super().__init__()
+    #         self.setWindowTitle("我是子窗口啊")
 
     # def queryWeather(self):
     #     cityName = self.ui.comboBox.currentText()
@@ -90,6 +107,6 @@ class MainDialog(QDialog):
 
 if __name__ == '__main__':
     myapp = QApplication(sys.argv)
-    myDlg = MainDialog()
+    myDlg = MainWindow()
     myDlg.show()
     sys.exit(myapp.exec_())
