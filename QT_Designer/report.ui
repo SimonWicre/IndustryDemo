@@ -33,7 +33,7 @@
      <string>报告给经理A</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Report_to_B_Button_2">
+   <widget class="QPushButton" name="Report_to_B_Button">
     <property name="geometry">
      <rect>
       <x>40</x>

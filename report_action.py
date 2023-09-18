@@ -17,6 +17,8 @@ class ReportActions(report.Ui_ReportWindow, QMainWindow):
         super().__init__()
         self.setupUi(self)
 
+        self.Report_to_A_Button.clicked.connect(self.save_file_locally("jingliA"))
+
     def save_file_locally(self, manager_name):
         output_path = "图片输出文件夹/" + manager_name
         if not os.path.exists(output_path):
