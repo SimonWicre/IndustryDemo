@@ -21,6 +21,9 @@ class MainWindow(login.Ui_MainWindow, QMainWindow):
         self.ifSuccessButton.clicked.connect(self.if_success)
         self.ifFailButton.clicked.connect(self.if_fail)
 
+        # self.ifFailButton.clicked.connect(self.show_child)
+        # self.child_window = report_action.ReportActions()
+
     # 获取各个输入框的内容
     def get_text(self):
         # 获取路径
@@ -57,11 +60,10 @@ class MainWindow(login.Ui_MainWindow, QMainWindow):
         self.ifSuccessOrFailLabel.setText("图像算法运行失败，请选择上报该问题")
 
         self.another_window = report_action.ReportActions()
-
         self.another_window.show()
 
-        # self.ui.child_window = Child()
-        # self.ui.child_window.show()
+    # def show_child(self):
+    #     self.child_window.show()
 
 
     # class Child(QWidget):
